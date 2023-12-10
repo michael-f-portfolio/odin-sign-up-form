@@ -1,8 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
 :root {
-    --primary-color: #9b9b9b;
-    --secondary-color: #777777;
+    --primary-color: #7997a2;
+    --secondary-color: #416e85;
+    --primary-background: #cfecff;
+    --secondary-background: #dff2ff;
+    --primary-font-family: 'Oswald', sans-serif;
+}
+
+/* Desktops & Laptops */
+@media only screen and (min-width: 1224px) {
+    .main {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Hero */
+    .background {
+        display: flex;
+        width: 40vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #odin-logo {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #odin-logo > span {
+        font-size: clamp(1.5rem, 5vw, 8rem);
+    }
+
+    #odin-logo > img {
+        width: clamp(1.5rem, 5vw, 8rem);
+    }
+
+    #image-credit, #image-credit > a:visited {
+        position: absolute;
+        font-size: min(1vw, 5vw, 10vw);
+        bottom: 0;
+        right: 1vw;
+        color: var(--primary-background);
+    }
+
+    /* Sign-Up Form */
+    .sign-up {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+    }
+
+    .sign-up-text {
+        margin-top: 10vh;
+        padding-left: 2vw;
+        padding-bottom: 3vh;
+        font-size: 2rem;
+    }
+
+    .sign-up-input {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2vw;
+    }
+
+    .name, .contact-info, .private {
+        display: flex;
+        margin-bottom: 2vh;
+    }
+    
+    .first-name, .last-name, .email, .phone-number, .first-password, .second-password {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2vw;
+    }
+
+    .sign-up-submit {
+        padding-left: 2vw;
+        padding-top: 2vh;
+    }
+
+    button {
+        height: 6vh;
+        width: 8vw;
+    }
+
+    .login {
+        padding-top: 2vh;
+        padding-left: 2vw;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 621px) and (max-width: 1223px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Hero */
+    .background {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #odin-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        height: 18vh;
+        width: 100%;
+    }
+
+    #odin-logo > img {
+        align-self: center;
+        width: 4rem;
+    }
+
+    #odin-logo > span {
+        font-size: 4rem;
+    }
+
+    #image-credit, #image-credit > a:visited {
+        position: relative;
+        font-size: 1em;
+        top: 3vh;
+    }
+
+    /* Sign-Up Form */
+    .sign-up {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sign-up-text {
+        align-self: center;
+        text-align: center;
+        width: 80%;
+        padding-bottom: 3vh;
+    }
+
+    .sign-up-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        margin-bottom: 4vh;
+    }
+
+    .name, .contact-info, .private {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2vh;
+    }
+
+    .first-name, .last-name, .email, .phone-number, .first-password, .second-password {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2vw;
+        label {
+            font-size: 1.5rem;
+        }
+        input {
+            width: 35vw;
+            height: 4vh;
+            font-size: 1.5rem;
+        }
+    }
+
+    .sign-up-submit {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3vh;
+    }
+
+    .sign-up-submit > button {
+        padding: 2.5vh 30vw;
+    }
+
+    .login {
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+        margin-bottom: 3vh;
+    }
+}
+
+/* Smartphones */
+@media only screen and (min-width: 375px) and (max-width: 620px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Hero */
+    .background {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #odin-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        height: 18vh;
+        width: 100%;
+    }
+
+    #odin-logo > img {
+        align-self: center;
+        width: 4rem;
+    }
+
+    #odin-logo > span {
+        font-size: 4rem;
+    }
+
+    #image-credit, #image-credit > a:visited {
+        position: relative;
+        font-size: 1em;
+        top: 3vh;
+    }
+
+    /* Sign-Up Form */
+    .sign-up {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sign-up-text {
+        text-align: center;
+    }
+
+    .sign-up-text, .sign-up-input {
+        padding-bottom: 3vh;
+    }
+
+    .sign-up-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3vh;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .name, .contact-info, .private {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-name, .last-name, .email, .phone-number, .first-password, .second-password {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label {
+            font-size: 1.5rem;
+        }
+        input {
+            width: 80vw;
+            height: 5vh;
+            font-size: 1rem;
+        }
+    }
+
+    .sign-up-submit {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3vh;
+    }
+
+    .sign-up-submit > button {
+        padding: 2.5vh 30vw;
+    }
+
+    .login {
+        display: flex;
+        justify-content: center;
+        gap: 1vw;
+        margin-bottom: 3vh;
+    }
 }
 
 body {
+    background-color: var(--primary-background);
+    font-family: var(--primary-font-family);
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+.background {
+    background-image: url(res/imgs/joel-jasmin-forestbird-gZBq1PTgIks-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sign-up a, .sign-up a:visited {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+#odin-logo {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#image-credit, #image-credit > a:visited {
+    color: var(--primary-background);
+}
+
+/* form */
+
+.sign-up-input {
+    background-color: var(--secondary-background);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 1px solid var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.sign-up-submit {
+    color: var(--secondary-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+button:hover {
     background-color: var(--primary-color);
+    cursor: pointer;
 }
